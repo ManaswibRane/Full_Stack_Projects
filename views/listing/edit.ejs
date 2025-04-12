@@ -1,0 +1,40 @@
+<% layout('layout/layout.ejs') -%>
+<body>
+    <form method="post" action="/listing/<%= element.id %>?_method=PUT">
+        <input type="text" value="<%= element.title %>" name="list[title]"> <br>
+
+        <textarea name="list[description]" id=""><%= element.description %></textarea><br>
+
+        <input type="text" value="<%= element.price %>" name="list[price]" placeholder="Price"><br>
+
+        <input type="text" value="<%= element.location %>" name="list[location]" placeholder="Location"><br>
+
+        <input type="text" value="<%= element.image %>" name="list[image]" placeholder="Image URL"><br>
+
+        <input type="text" value="<%= element.country %>" name="list[country]"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/listing/<%= element.id %>?_method=PUT">
+        <input type="text" value="<%= element.title %>" name="list[title]" > <br>
+        <textarea name="list[description]" "<%= element.description %>" id=""></textarea><br>
+        <input type="text" value="" name="list[price]" placeholder="Price" ><br>
+        <input type="text" value="" name="list[location]" placeholder="Location" > <br>
+        <input type="text" value="" name="list[image]" placeholder="Image URL" ><br>
+        <input type="text" name="list[country]" id=""> <br>
+       <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html> -->

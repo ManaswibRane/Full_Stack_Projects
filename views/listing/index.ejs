@@ -1,0 +1,21 @@
+<% layout('layout/layout.ejs') -%>
+    <form action="/listing/new" method="get">
+        <button type="submit">New</button>
+    </form>
+    <div class="container">
+        <% for(listItem of list){ %>
+            <div>
+                <h6><a href="http://localhost:8080/listing/<%= listItem.id %>"> <%= listItem.title %></a>
+                   
+                </h6>
+                   
+                
+                <img src="<%= listItem.image %>" alt="">
+                <form action="/listing/<%=listItem.id %>?_method=DELETE" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+
+            <% } %>
+    </div>
+     
