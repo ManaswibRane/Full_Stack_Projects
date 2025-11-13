@@ -63,20 +63,6 @@ app.get("/listing",async (req,res)=>{
     res.render("listing/index.ejs",{list})
 })
 
-
-app.get("/testlisting",()=>{
-      let sample=new Listing(
-        {
-            title: "New Villa",
-            description:"Country Side",
-            image:"https://unsplash.com/photos/a-bird-flies-gracefully-through-the-sky-_6sc3AzkEyA",
-            price: 1200,
-            location:"Mumbai",
-             country:"India",
-        }
-      )
-      sample.save();
-})
 async function main(){
    await mongoose.connect(MONGO_URL)
 }
